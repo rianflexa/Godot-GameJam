@@ -1,0 +1,100 @@
+[gd_scene load_steps=19 format=3 uid="uid://c0bbvmmcosk8d"]
+
+[ext_resource type="Script" path="res://Cenas/Objetos/coluna_fogo.gd" id="1_r172a"]
+[ext_resource type="Texture2D" uid="uid://by2sr5dblth4t" path="res://Art/Personagem/fire_column_medium/fire_column_medium_1.png" id="1_wg53e"]
+[ext_resource type="Texture2D" uid="uid://1y4lpuhfix76" path="res://Art/Personagem/fire_column_medium/fire_column_medium_2.png" id="2_frb4r"]
+[ext_resource type="Texture2D" uid="uid://bcqwg0gnm6ygi" path="res://Art/Personagem/fire_column_medium/fire_column_medium_3.png" id="3_bwl5o"]
+[ext_resource type="Texture2D" uid="uid://w1kg8plif731" path="res://Art/Personagem/fire_column_medium/fire_column_medium_4.png" id="4_x23ud"]
+[ext_resource type="Texture2D" uid="uid://wjhcxxycidxh" path="res://Art/Personagem/fire_column_medium/fire_column_medium_5.png" id="5_au0yk"]
+[ext_resource type="Texture2D" uid="uid://b4y2uydsq5imt" path="res://Art/Personagem/fire_column_medium/fire_column_medium_6.png" id="6_w6bcu"]
+[ext_resource type="Texture2D" uid="uid://reqy2k5kte01" path="res://Art/Personagem/fire_column_medium/fire_column_medium_7.png" id="7_2r7gi"]
+[ext_resource type="Texture2D" uid="uid://doxemwlc1eiu8" path="res://Art/Personagem/fire_column_medium/fire_column_medium_8.png" id="8_k4kmf"]
+[ext_resource type="Texture2D" uid="uid://bko2s14x8g300" path="res://Art/Personagem/fire_column_medium/fire_column_medium_9.png" id="9_dc2l1"]
+[ext_resource type="Texture2D" uid="uid://cnyxsrb5sjf56" path="res://Art/Personagem/fire_column_medium/fire_column_medium_10.png" id="10_5ek1a"]
+[ext_resource type="Texture2D" uid="uid://dlgh8f2783rat" path="res://Art/Personagem/fire_column_medium/fire_column_medium_11.png" id="11_t2h17"]
+[ext_resource type="Texture2D" uid="uid://bvpq3haom3ka4" path="res://Art/Personagem/fire_column_medium/fire_column_medium_12.png" id="12_cf0jp"]
+[ext_resource type="Texture2D" uid="uid://dgfp66x68dtqb" path="res://Art/Personagem/fire_column_medium/fire_column_medium_13.png" id="13_32j72"]
+[ext_resource type="Texture2D" uid="uid://ddqp26y2esehm" path="res://Art/Personagem/fire_column_medium/fire_column_medium_14.png" id="14_7ej6v"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ni8i3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wg53e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_frb4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bwl5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_x23ud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_au0yk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_w6bcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2r7gi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_k4kmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dc2l1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5ek1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_t2h17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cf0jp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_32j72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_7ej6v")
+}],
+"loop": true,
+"name": &"Ta-pegando-fogo-bicho",
+"speed": 24.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1i51c"]
+radius = 13.0
+height = 108.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s2o00"]
+radius = 16.0
+height = 120.0
+
+[node name="coluna-fogo" type="RigidBody2D"]
+script = ExtResource("1_r172a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(21.75, -60.5)
+scale = Vector2(1.96667, 2.34444)
+sprite_frames = SubResource("SpriteFrames_ni8i3")
+animation = &"Ta-pegando-fogo-bicho"
+autoplay = "Ta-pegando-fogo-bicho"
+frame_progress = 0.895793
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(21, -35)
+shape = SubResource("CapsuleShape2D_1i51c")
+
+[node name="Area2D" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(21, -47)
+shape = SubResource("CapsuleShape2D_s2o00")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

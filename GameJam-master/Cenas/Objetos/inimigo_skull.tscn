@@ -1,0 +1,97 @@
+[gd_scene load_steps=14 format=3 uid="uid://r8jv8jd2py5v"]
+
+[ext_resource type="Script" path="res://Cenas/Objetos/inimigo_skull.gd" id="1_14m2g"]
+[ext_resource type="Texture2D" uid="uid://cmwsx6riqnmsi" path="res://Art/Personagem/Idle 2 (52x54).png" id="1_txhml"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eg8h1"]
+atlas = ExtResource("1_txhml")
+region = Rect2(0, 0, 52, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iaota"]
+atlas = ExtResource("1_txhml")
+region = Rect2(52, 0, 52, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mju4c"]
+atlas = ExtResource("1_txhml")
+region = Rect2(104, 0, 52, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_il5df"]
+atlas = ExtResource("1_txhml")
+region = Rect2(156, 0, 52, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_num4a"]
+atlas = ExtResource("1_txhml")
+region = Rect2(208, 0, 52, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtr3w"]
+atlas = ExtResource("1_txhml")
+region = Rect2(260, 0, 52, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m46do"]
+atlas = ExtResource("1_txhml")
+region = Rect2(312, 0, 52, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvtvm"]
+atlas = ExtResource("1_txhml")
+region = Rect2(364, 0, 52, 52)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bevgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eg8h1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iaota")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mju4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_il5df")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_num4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtr3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m46do")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvtvm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 16.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_588tb"]
+radius = 22.0227
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tufo8"]
+radius = 26.0192
+
+[node name="Inimigo-skull" type="RigidBody2D"]
+position = Vector2(402, 224)
+script = ExtResource("1_14m2g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.999998, 2)
+scale = Vector2(1.73077, 1.63462)
+sprite_frames = SubResource("SpriteFrames_bevgy")
+autoplay = "default"
+frame_progress = 0.956695
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 6)
+shape = SubResource("CircleShape2D_588tb")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, 5)
+shape = SubResource("CircleShape2D_tufo8")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
