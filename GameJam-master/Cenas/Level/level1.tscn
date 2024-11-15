@@ -423,7 +423,7 @@ use_parent_material = true
 tile_set = SubResource("TileSet_7cg7e")
 
 [node name="CharacterBody2D" parent="Objetos das cenas" instance=ExtResource("4_yqmh5")]
-position = Vector2(2409, 384)
+position = Vector2(8537, 36)
 
 [node name="Camera2D" type="Camera2D" parent="Objetos das cenas/CharacterBody2D"]
 position = Vector2(1, 1)
