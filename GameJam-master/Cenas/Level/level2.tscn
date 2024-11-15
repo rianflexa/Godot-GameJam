@@ -9,11 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://r8jv8jd2py5v" path="res://Cenas/Objetos/inimigo_skull.tscn" id="7_pb047"]
 [ext_resource type="Script" path="res://Cenas/Objetos/queda.gd" id="8_rd64u"]
 [ext_resource type="PackedScene" uid="uid://c0bbvmmcosk8d" path="res://Cenas/Objetos/coluna_fogo.tscn" id="9_kllhl"]
-[ext_resource type="Texture2D" uid="uid://53utc3shmv3j" path="res://Art/Background/Background parts/5 - Sky_color.png" id="10_smj13"]
-[ext_resource type="Texture2D" uid="uid://cbba6hxjliite" path="res://Art/Background/Background parts/3 - Cloud_cover_1.png" id="11_e187v"]
-[ext_resource type="Texture2D" uid="uid://cvqjl3r6ratuh" path="res://Art/Background/Background parts/4 - Cloud_cover_2.png" id="12_3adqv"]
-[ext_resource type="Texture2D" uid="uid://cgweuf1gqa5hb" path="res://Art/Background/Background parts/2 - Hills.png" id="13_6j3x0"]
-[ext_resource type="Texture2D" uid="uid://dngupx3xtq5f2" path="res://Art/Background/Background parts/1 - Foreground_scenery.png" id="14_vpjoc"]
+[ext_resource type="Texture2D" uid="uid://bf3alc7dc8lq3" path="res://Art/Background/Background parts-water/5 - Sky_color.png" id="10_rpngu"]
+[ext_resource type="Texture2D" uid="uid://b4g7x221mjw7i" path="res://Art/Background/Background parts-water/4 - Background_clouds.png" id="11_420mm"]
+[ext_resource type="Texture2D" uid="uid://bnhpfp6jeei6r" path="res://Art/Background/Background parts-water/3 - Floating_clouds.png" id="12_sw0xr"]
+[ext_resource type="Texture2D" uid="uid://ctlpbg207h6h2" path="res://Art/Background/Background parts-water/2 - Waters_version_2.png" id="13_hd8hx"]
+[ext_resource type="Texture2D" uid="uid://cawdlkful6t0b" path="res://Art/Background/Background parts-water/1 - Waters_version_1.png" id="14_i3jjo"]
 [ext_resource type="Texture2D" uid="uid://b8qpw8pwh13jt" path="res://Art/Icones/love-always-wins (1).png" id="15_eyyii"]
 [ext_resource type="Script" path="res://Cenas/Level/pausa.gd" id="16_iqem7"]
 
@@ -504,16 +504,17 @@ motion_mirroring = Vector2(1152, 0)
 [node name="Sprite2D" type="Sprite2D" parent="Objetos das cenas/ParallaxBackground/sky"]
 position = Vector2(0, -180)
 scale = Vector2(4, 4)
-texture = ExtResource("10_smj13")
+texture = ExtResource("10_rpngu")
 centered = false
 
 [node name="cloud" type="ParallaxLayer" parent="Objetos das cenas/ParallaxBackground"]
+motion_scale = Vector2(0.7, 1)
 motion_mirroring = Vector2(1152, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Objetos das cenas/ParallaxBackground/cloud"]
 position = Vector2(0, -180)
 scale = Vector2(4, 4)
-texture = ExtResource("11_e187v")
+texture = ExtResource("11_420mm")
 centered = false
 
 [node name="cloud-montain" type="ParallaxLayer" parent="Objetos das cenas/ParallaxBackground"]
@@ -523,27 +524,26 @@ motion_mirroring = Vector2(1152, 0)
 [node name="Sprite2D" type="Sprite2D" parent="Objetos das cenas/ParallaxBackground/cloud-montain"]
 position = Vector2(0, -180)
 scale = Vector2(4, 4)
-texture = ExtResource("12_3adqv")
+texture = ExtResource("12_sw0xr")
 centered = false
 
 [node name="tree" type="ParallaxLayer" parent="Objetos das cenas/ParallaxBackground"]
-motion_scale = Vector2(0.7, 1)
+motion_scale = Vector2(0.9, 1)
 motion_mirroring = Vector2(1152, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Objetos das cenas/ParallaxBackground/tree"]
 position = Vector2(0, -180)
 scale = Vector2(4, 4)
-texture = ExtResource("13_6j3x0")
+texture = ExtResource("13_hd8hx")
 centered = false
 
 [node name="fg-tree" type="ParallaxLayer" parent="Objetos das cenas/ParallaxBackground"]
-motion_scale = Vector2(0.8, 1)
 motion_mirroring = Vector2(1152, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Objetos das cenas/ParallaxBackground/fg-tree"]
 position = Vector2(0, -180)
 scale = Vector2(4, 4)
-texture = ExtResource("14_vpjoc")
+texture = ExtResource("14_i3jjo")
 centered = false
 
 [node name="UI" type="CanvasLayer" parent="."]

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://2p7bcq2bsgfi" path="res://Cenas/Objetos/jogador_principal.tscn" id="4_u881v"]
 [ext_resource type="PackedScene" uid="uid://dlvvarqql1ca0" path="res://Cenas/Objetos/coletavel.tscn" id="5_grx6w"]
 [ext_resource type="PackedScene" uid="uid://bm0hyg6gxhbtu" path="res://Cenas/Objetos/final.tscn" id="6_s5hix"]
-[ext_resource type="PackedScene" uid="uid://cjm6f5n1v72po" path="res://Cenas/Level/level2.tscn" id="7_8h1il"]
+[ext_resource type="PackedScene" uid="uid://hs5e4n4k6nn" path="res://Cenas/Level/level2.tscn" id="7_8h1il"]
 [ext_resource type="PackedScene" uid="uid://r8jv8jd2py5v" path="res://Cenas/Objetos/inimigo_skull.tscn" id="8_bpo7t"]
 [ext_resource type="Script" path="res://Cenas/Objetos/queda.gd" id="9_ce0as"]
 [ext_resource type="PackedScene" uid="uid://c0bbvmmcosk8d" path="res://Cenas/Objetos/coluna_fogo.tscn" id="10_58v35"]
