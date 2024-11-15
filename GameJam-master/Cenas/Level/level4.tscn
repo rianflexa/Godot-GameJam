@@ -460,6 +460,9 @@ position = Vector2(4937, -220)
 [node name="Coletavel9" parent="Objetos das cenas/grupo de coletaveis" instance=ExtResource("5_traks")]
 position = Vector2(4627, -222)
 
+[node name="Coletavel10" parent="Objetos das cenas/grupo de coletaveis" instance=ExtResource("5_traks")]
+position = Vector2(3593, -222)
+
 [node name="Inimigos" type="Node" parent="Objetos das cenas"]
 
 [node name="coluna-fogo" parent="Objetos das cenas/Inimigos" instance=ExtResource("10_1vrjj")]
