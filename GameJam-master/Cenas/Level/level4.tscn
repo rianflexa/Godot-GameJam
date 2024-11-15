@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=4 uid="uid://c3jd4v28hd16n"]
+[gd_scene load_steps=22 format=4 uid="uid://c3jd4v28hd16n"]
 
 [ext_resource type="Script" path="res://Cenas/Objetos/gerenciador.gd" id="1_j8ryy"]
 [ext_resource type="Texture2D" uid="uid://bxkhpcv0enhdq" path="res://Art/Background/Blue.png" id="2_iv7pv"]
 [ext_resource type="Texture2D" uid="uid://dr7v7do6eyyqb" path="res://Art/Elementos/Terrain (16x16).png" id="3_4agmy"]
 [ext_resource type="PackedScene" uid="uid://2p7bcq2bsgfi" path="res://Cenas/Objetos/jogador_principal.tscn" id="4_tk7di"]
+[ext_resource type="PackedScene" uid="uid://dlvvarqql1ca0" path="res://Cenas/Objetos/coletavel.tscn" id="5_traks"]
 [ext_resource type="PackedScene" uid="uid://bm0hyg6gxhbtu" path="res://Cenas/Objetos/final.tscn" id="6_gti3r"]
 [ext_resource type="PackedScene" uid="uid://r8jv8jd2py5v" path="res://Cenas/Objetos/inimigo_skull.tscn" id="8_d4qel"]
 [ext_resource type="Script" path="res://Cenas/Objetos/queda.gd" id="9_heds4"]
@@ -431,6 +432,36 @@ position_smoothing_enabled = true
 position_smoothing_speed = 9.0
 
 [node name="grupo de coletaveis" type="Node" parent="Objetos das cenas"]
+
+[node name="Coletavel" parent="Objetos das cenas/grupo de coletaveis" instance=ExtResource("5_traks")]
+position = Vector2(2825, 192)
+
+[node name="Coletavel2" parent="Objetos das cenas/grupo de coletaveis" instance=ExtResource("5_traks")]
+position = Vector2(3130, 189)
+
+[node name="Coletavel3" parent="Objetos das cenas/grupo de coletaveis" instance=ExtResource("5_traks")]
+position = Vector2(3462, -71)
+
+[node name="Coletavel4" parent="Objetos das cenas/grupo de coletaveis" instance=ExtResource("5_traks")]
+position = Vector2(3748, -68)
+
+[node name="Coletavel5" parent="Objetos das cenas/grupo de coletaveis" instance=ExtResource("5_traks")]
+position = Vector2(4052, 184)
+
+[node name="Coletavel6" parent="Objetos das cenas/grupo de coletaveis" instance=ExtResource("5_traks")]
+position = Vector2(4196, 209)
+
+[node name="Coletavel7" parent="Objetos das cenas/grupo de coletaveis" instance=ExtResource("5_traks")]
+position = Vector2(4676, 193)
+
+[node name="Coletavel8" parent="Objetos das cenas/grupo de coletaveis" instance=ExtResource("5_traks")]
+position = Vector2(4937, -220)
+
+[node name="Coletavel9" parent="Objetos das cenas/grupo de coletaveis" instance=ExtResource("5_traks")]
+position = Vector2(4627, -222)
+
+[node name="Coletavel10" parent="Objetos das cenas/grupo de coletaveis" instance=ExtResource("5_traks")]
+position = Vector2(3593, -222)
 
 [node name="Inimigos" type="Node" parent="Objetos das cenas"]
 
