@@ -1,6 +1,7 @@
-[gd_scene load_steps=37 format=4 uid="uid://hs5e4n4k6nn"]
+[gd_scene load_steps=38 format=4 uid="uid://hs5e4n4k6nn"]
 
 [ext_resource type="Texture2D" uid="uid://bxkhpcv0enhdq" path="res://Art/Background/Blue.png" id="1_afh5o"]
+[ext_resource type="Script" path="res://Cenas/Level/level_4.gd" id="1_tpo0f"]
 [ext_resource type="Texture2D" uid="uid://dr7v7do6eyyqb" path="res://Art/Elementos/Terrain (16x16).png" id="2_ufs10"]
 [ext_resource type="PackedScene" uid="uid://2p7bcq2bsgfi" path="res://Cenas/Objetos/jogador_principal.tscn" id="3_q0nph"]
 [ext_resource type="PackedScene" uid="uid://dlvvarqql1ca0" path="res://Cenas/Objetos/coletavel.tscn" id="4_4jb42"]
@@ -706,6 +707,7 @@ sources/1 = SubResource("TileSetAtlasSource_0fknv")
 distance = 1.0
 
 [node name="Node" type="Node"]
+script = ExtResource("1_tpo0f")
 
 [node name="Gerenciador" type="Node" parent="." node_paths=PackedStringArray("lifepoints")]
 unique_name_in_owner = true

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://eimf6wm8bi6c"]
+[gd_scene load_steps=4 format=3 uid="uid://eimf6wm8bi6c"]
 
 [ext_resource type="Script" path="res://Cenas/Menu/main_menu.gd" id="1_vu7vd"]
 [ext_resource type="Texture2D" uid="uid://c10vumq70k5eb" path="res://Art/Menu/inicio.png" id="2_f6r3q"]
+[ext_resource type="Texture2D" uid="uid://fxadv43ysf1q" path="res://Art/Menu/cooltext470082442119971.png" id="3_2v2dd"]
 
 [node name="MainMenu" type="Node"]
 script = ExtResource("1_vu7vd")
@@ -27,12 +28,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -339.5
-offset_top = -157.5
-offset_right = 342.5
+offset_left = -339.0
+offset_top = -159.5
+offset_right = 343.0
 offset_bottom = -40.5
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("3_2v2dd")
 stretch_mode = 1
 
 [node name="jogar" type="Button" parent="."]
