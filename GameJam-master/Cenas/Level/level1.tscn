@@ -1,5 +1,6 @@
-[gd_scene load_steps=23 format=4 uid="uid://cpnwaobymhjh4"]
+[gd_scene load_steps=25 format=4 uid="uid://cpnwaobymhjh4"]
 
+[ext_resource type="Script" path="res://Cenas/Level/level_1.gd" id="1_1u4rr"]
 [ext_resource type="Script" path="res://Cenas/Objetos/gerenciador.gd" id="1_aij3h"]
 [ext_resource type="Texture2D" uid="uid://bxkhpcv0enhdq" path="res://Art/Background/Blue.png" id="2_3ouc4"]
 [ext_resource type="Texture2D" uid="uid://dr7v7do6eyyqb" path="res://Art/Elementos/Terrain (16x16).png" id="3_b7jf3"]
@@ -15,6 +16,7 @@
 [ext_resource type="Script" path="res://Cenas/Level/pausa.gd" id="11_ebid3"]
 [ext_resource type="Texture2D" uid="uid://db6ke0sagqvff" path="res://Art/Background/winter-back/1 - Snowy_foreground_area.png" id="11_vsqk0"]
 [ext_resource type="PackedScene" uid="uid://c3jd4v28hd16n" path="res://Cenas/Level/level2.tscn" id="15_1whlw"]
+[ext_resource type="AudioStream" uid="uid://csdsi3xvt7h3y" path="res://Audio/background/AdhesiveWombat - Night Shade  NO COPYRIGHT 8-bit Music.mp3" id="17_as06h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cfo23"]
 texture = ExtResource("3_b7jf3")
@@ -495,6 +497,7 @@ sources/0 = SubResource("TileSetAtlasSource_g3aol")
 distance = 1.0
 
 [node name="Node" type="Node"]
+script = ExtResource("1_1u4rr")
 
 [node name="Gerenciador" type="Node" parent="." node_paths=PackedStringArray("lifepoints")]
 unique_name_in_owner = true
@@ -712,6 +715,12 @@ text = "VOLTAR PARA O MENU INICIAL"
 [node name="Final" parent="." instance=ExtResource("6_05ott")]
 position = Vector2(1815, 437)
 target_level = ExtResource("15_1whlw")
+
+[node name="Audio_BG" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_as06h")
+volume_db = -20.0
+max_distance = 100000.0
+bus = &"Music"
 
 [connection signal="body_entered" from="Objetos das cenas/Area2D" to="Objetos das cenas/Area2D" method="_on_body_entered"]
 [connection signal="pressed" from="UI/Pausa/PausePanel/Continuar" to="UI/Pausa" method="_on_continuar_pressed"]
