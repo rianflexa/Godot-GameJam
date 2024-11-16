@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://hs5e4n4k6nn"]
+[gd_scene load_steps=37 format=4 uid="uid://hs5e4n4k6nn"]
 
 [ext_resource type="Texture2D" uid="uid://bxkhpcv0enhdq" path="res://Art/Background/Blue.png" id="1_afh5o"]
 [ext_resource type="Texture2D" uid="uid://dr7v7do6eyyqb" path="res://Art/Elementos/Terrain (16x16).png" id="2_ufs10"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://cawdlkful6t0b" path="res://Art/Background/Background parts-water/1 - Waters_version_1.png" id="14_i3jjo"]
 [ext_resource type="Texture2D" uid="uid://b8qpw8pwh13jt" path="res://Art/Icones/love-always-wins (1).png" id="15_eyyii"]
 [ext_resource type="Script" path="res://Cenas/Level/pausa.gd" id="16_iqem7"]
+[ext_resource type="AudioStream" uid="uid://52typda7onww" path="res://Audio/background/Jimmy Fontanez - Dub Hub  NO COPYRIGHT 8-bit Music.mp3" id="24_moptk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cfo23"]
 texture = ExtResource("2_ufs10")
@@ -968,6 +969,11 @@ offset_top = 372.0
 offset_right = 713.0
 offset_bottom = 436.0
 text = "VOLTAR PARA O MENU INICIAL"
+
+[node name="Audio_BG" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("24_moptk")
+volume_db = -20.0
+max_distance = 100000.0
 
 [connection signal="body_entered" from="Objetos das cenas/Area2D" to="Objetos das cenas/Area2D" method="_on_body_entered"]
 [connection signal="pressed" from="UI/Pausa/PausePanel/Continuar" to="UI/Pausa" method="_on_continuar_pressed"]
