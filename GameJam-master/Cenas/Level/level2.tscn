@@ -1,7 +1,6 @@
-[gd_scene load_steps=25 format=4 uid="uid://c3jd4v28hd16n"]
+[gd_scene load_steps=24 format=4 uid="uid://c3jd4v28hd16n"]
 
 [ext_resource type="Script" path="res://Cenas/Objetos/gerenciador.gd" id="1_j8ryy"]
-[ext_resource type="Script" path="res://Cenas/Level/level_2.gd" id="1_uu106"]
 [ext_resource type="Texture2D" uid="uid://bxkhpcv0enhdq" path="res://Art/Background/Blue.png" id="2_iv7pv"]
 [ext_resource type="Texture2D" uid="uid://dr7v7do6eyyqb" path="res://Art/Elementos/Terrain (16x16).png" id="3_4agmy"]
 [ext_resource type="PackedScene" uid="uid://2p7bcq2bsgfi" path="res://Cenas/Objetos/jogador_principal.tscn" id="4_tk7di"]
@@ -18,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dngupx3xtq5f2" path="res://Art/Background/Background parts/1 - Foreground_scenery.png" id="15_ihpfb"]
 [ext_resource type="Texture2D" uid="uid://b8qpw8pwh13jt" path="res://Art/Icones/love-always-wins (1).png" id="16_jtivm"]
 [ext_resource type="Script" path="res://Cenas/Level/pausa.gd" id="17_j5esx"]
-[ext_resource type="AudioStream" uid="uid://52typda7onww" path="res://Audio/background/Jimmy Fontanez - Dub Hub  NO COPYRIGHT 8-bit Music.mp3" id="19_lax4t"]
+[ext_resource type="AudioStream" uid="uid://csdsi3xvt7h3y" path="res://Audio/background/AdhesiveWombat - Night Shade  NO COPYRIGHT 8-bit Music.mp3" id="17_rvn5p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cfo23"]
 texture = ExtResource("3_4agmy")
@@ -395,7 +394,6 @@ sources/0 = SubResource("TileSetAtlasSource_g3aol")
 distance = 1.0
 
 [node name="Node" type="Node"]
-script = ExtResource("1_uu106")
 
 [node name="Gerenciador" type="Node" parent="." node_paths=PackedStringArray("lifepoints")]
 unique_name_in_owner = true
@@ -668,10 +666,10 @@ offset_right = 713.0
 offset_bottom = 436.0
 text = "VOLTAR PARA O MENU INICIAL"
 
-[node name="Audio_BG" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("19_lax4t")
-volume_db = -20.0
-max_distance = 100000.0
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("17_rvn5p")
 
 [connection signal="body_entered" from="Objetos das cenas/Area2D" to="Objetos das cenas/Area2D" method="_on_body_entered"]
 [connection signal="pressed" from="UI/Pausa/PausePanel/Continuar" to="UI/Pausa" method="_on_continuar_pressed"]
