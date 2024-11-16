@@ -14,4 +14,17 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if (body.name == "CharacterBody2D"):
-		gerenciador.reduzir_vida()
+		var y_delta = position.y - body.position.y
+		var x_delta = body.position.x - position.x
+		if (y_delta > 3000):
+			print("Destroy enemy")
+			queue_free()
+			body.jump()
+		else:
+			print("Decrease Health")
+			gerenciador.reduzir_vida()
+			if (x_delta > 0):
+				body.jump_side(500)
+			else:
+				body.jump_side(-500)
+			

@@ -14,6 +14,10 @@ config/name="godot-quarta-tentativa-dessa-vez-vai"
 run/main_scene="res://Cenas/Menu/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 
+[audio]
+
+buses/default_bus_layout="res://Audio/default_bus_layout.tres"
+
 [display]
 
 window/stretch/mode="canvas_items"

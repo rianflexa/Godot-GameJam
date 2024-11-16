@@ -308,7 +308,7 @@ scale = Vector2(2.1875, 2.125)
 sprite_frames = SubResource("SpriteFrames_eopg8")
 animation = &"hit"
 autoplay = "idle"
-frame_progress = 0.398866
+frame_progress = 0.282989
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 1)

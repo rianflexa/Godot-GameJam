@@ -12,8 +12,7 @@ var vida = 3
 func reduzir_vida():
 	vida -= 1
 	print(vida)
-	if (animated_sprite_2d.vida > 3):
-		
+	if (vida - 1):
 		animated_sprite_2d.animation = "hit"
 
 func jump():
